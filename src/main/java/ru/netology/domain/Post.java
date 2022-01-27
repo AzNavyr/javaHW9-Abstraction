@@ -1,11 +1,13 @@
 package ru.netology.domain;
 
 public class Post {
+    private WritingOnTheWall writingOnTheWall;
+    private Information information;
     private CommentInfo commentInfo; //комментарии
     private LikeInfo likeInfo; //лайки
     private RepostInfo repostInfo; // репосты
     private SubscribersInfo subscribersInfo;
-    private String id; //идентификатор записи
+    private String postId; //идентификатор записи
     private String imageUrl; //адрес картинки
     private int ownerId; //идентификатор пользователя или сообщества.
     private String name; // название
@@ -14,6 +16,22 @@ public class Post {
     private int view; // просмотры
     private int fromId;
     private String postType;
+
+    public WritingOnTheWall getWritingOnTheWall() {
+        return writingOnTheWall;
+    }
+
+    public void setWritingOnTheWall(WritingOnTheWall writingOnTheWall) {
+        this.writingOnTheWall = writingOnTheWall;
+    }
+
+    public Information getInformation() {
+        return information;
+    }
+
+    public void setInformation(Information information) {
+        this.information = information;
+    }
 
     public CommentInfo getCommentInfo() {
         return commentInfo;
@@ -47,12 +65,12 @@ public class Post {
         this.subscribersInfo = subscribersInfo;
     }
 
-    public String getId() {
-        return id;
+    public String getPostId() {
+        return postId;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void setPostId(String postId) {
+        this.postId = postId;
     }
 
     public String getImageUrl() {
