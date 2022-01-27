@@ -1,36 +1,112 @@
 package ru.netology.domain;
 
 public class Post {
-    private int postId;     //идентификатор поста
-    private int authorId;     //идентификатор автора поста
-    private int dataPost;       //дата публикации
-    private String postText;      //текст публикации
-    private int viewerPostCount;    //счетчик кол-ва просмотров поста
-    private boolean isPrivatPostOrNot;      //приватная публикация или нет
-    private boolean isFixedPostOrNot;       //закрепленная публикация или нет
+    private String id; //идентификатор записи
+    private String imageUrl; //адрес картинки
+    private int ownerId; //идентификатор пользователя или сообщества.
+    private String name; // название
+    private int date; // время и дата публикауии
+    private String text; // текст публикации
+    private CommentInfo commentInfo; //комментарии
+    private LikeInfo likeInfo; //лайки
+    private RepostInfo repostsInfo; // репосты
+    private int view; // просмотры
+    private int fromId;
+    private String postType;
 
-    public void setAuthorId(int authorId) {
-        //вызов команды присваиет идентификатор автора публикацие
+    public String getId() {
+        return id;
     }
 
-    public void setDataPost() {
-        //данная команда присваивает дату публикации
+    public void setId(String id) {
+        this.id = id;
     }
 
-    public void setPostText(String postText) {
-        //команда позволяет присвоить текст публикации
+    public String getImageUrl() {
+        return imageUrl;
     }
 
-    public void setViewerPostCount() {
-        //команда подсчитывает количество просмотревщих запись
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
     }
 
-    public boolean isFixedPostOrNot(int oneOrNull) {
-        // команда принимает на вход 1 или 0 и обрабатывает данные 1 -закрепленный пост, 0 не закреплен
+    public int getOwnerId() {
+        return ownerId;
     }
 
-    public boolean isPrivatOrNot(int oneOrNull) {
-        //команда принимающая на вход 1 или 0 и обрабатывающая данные 1-приватный пост, 0-общедоступный
+    public void setOwnerId(int ownerId) {
+        this.ownerId = ownerId;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getDate() {
+        return date;
+    }
+
+    public void setDate(int date) {
+        this.date = date;
+    }
+
+    public String getText() {
+        return text;
+    }
+
+    public void setText(String text) {
+        this.text = text;
+    }
+
+    public CommentInfo getCommentInfo() {
+        return commentInfo;
+    }
+
+    public void setCommentInfo(CommentInfo commentInfo) {
+        this.commentInfo = commentInfo;
+    }
+
+    public LikeInfo getLikeInfo() {
+        return likeInfo;
+    }
+
+    public void setLikeInfo(LikeInfo likeInfo) {
+        this.likeInfo = likeInfo;
+    }
+
+    public RepostInfo getRepostsInfo() {
+        return repostsInfo;
+    }
+
+    public void setRepostsInfo(RepostInfo repostsInfo) {
+        this.repostsInfo = repostsInfo;
+    }
+
+    public int getView() {
+        return view;
+    }
+
+    public void setView(int view) {
+        this.view = view;
+    }
+
+    public int getFromId() {
+        return fromId;
+    }
+
+    public void setFromId(int fromId) {
+        this.fromId = fromId;
+    }
+
+    public String getPostType() {
+        return postType;
+    }
+
+    public void setPostType(String postType) {
+        this.postType = postType;
+    }
 }

@@ -5,8 +5,27 @@ public class LikeInfo {
     private int likeCountOfPost;   //счетчик кол-ва лайков публикации
     private int likeCountComment;      //счетчик кол-ва лайков к каждому из комментариев
 
-    public void setCanRepost(int canRepos) {
-        //если 1 то может сделать репост, 0 тогда не может сделать репост
+    public int getLikeId() {
+        return likeId;
     }
 
+    public void setLikeId(int likeId) {
+        this.likeId = likeId;
+    }
+
+    public int getLikeCountOfPost() {
+        return likeCountOfPost;
+    }
+
+    public void setLikeCountOfPost(int likeCountOfPost) {
+        this.likeCountOfPost = likeCountOfPost;
+    }
+
+    public int getLikeCountComment() {
+        return likeCountComment;
+    }
+
+    public void setLikeCountComment(int likeCountComment) {
+        this.likeCountComment = likeCountComment;
+    }
 }
