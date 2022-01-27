@@ -1,9 +1,18 @@
 package ru.netology.domain;
 
 public class LikeInfo {
+    private SubscribersInfo subscribersInfo;
     private int likeId;  //идентификатор пользователя поставившего лайк
     private int likeCountOfPost;   //счетчик кол-ва лайков публикации
     private int likeCountComment;      //счетчик кол-ва лайков к каждому из комментариев
+
+    public SubscribersInfo getSubscribersInfo() {
+        return subscribersInfo;
+    }
+
+    public void setSubscribersInfo(SubscribersInfo subscribersInfo) {
+        this.subscribersInfo = subscribersInfo;
+    }
 
     public int getLikeId() {
         return likeId;

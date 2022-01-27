@@ -1,18 +1,51 @@
 package ru.netology.domain;
 
 public class Post {
+    private CommentInfo commentInfo; //комментарии
+    private LikeInfo likeInfo; //лайки
+    private RepostInfo repostInfo; // репосты
+    private SubscribersInfo subscribersInfo;
     private String id; //идентификатор записи
     private String imageUrl; //адрес картинки
     private int ownerId; //идентификатор пользователя или сообщества.
     private String name; // название
     private int date; // время и дата публикауии
     private String text; // текст публикации
-    private CommentInfo commentInfo; //комментарии
-    private LikeInfo likeInfo; //лайки
-    private RepostInfo repostsInfo; // репосты
     private int view; // просмотры
     private int fromId;
     private String postType;
+
+    public CommentInfo getCommentInfo() {
+        return commentInfo;
+    }
+
+    public void setCommentInfo(CommentInfo commentInfo) {
+        this.commentInfo = commentInfo;
+    }
+
+    public LikeInfo getLikeInfo() {
+        return likeInfo;
+    }
+
+    public void setLikeInfo(LikeInfo likeInfo) {
+        this.likeInfo = likeInfo;
+    }
+
+    public RepostInfo getRepostInfo() {
+        return repostInfo;
+    }
+
+    public void setRepostInfo(RepostInfo repostInfo) {
+        this.repostInfo = repostInfo;
+    }
+
+    public SubscribersInfo getSubscribersInfo() {
+        return subscribersInfo;
+    }
+
+    public void setSubscribersInfo(SubscribersInfo subscribersInfo) {
+        this.subscribersInfo = subscribersInfo;
+    }
 
     public String getId() {
         return id;
@@ -60,30 +93,6 @@ public class Post {
 
     public void setText(String text) {
         this.text = text;
-    }
-
-    public CommentInfo getCommentInfo() {
-        return commentInfo;
-    }
-
-    public void setCommentInfo(CommentInfo commentInfo) {
-        this.commentInfo = commentInfo;
-    }
-
-    public LikeInfo getLikeInfo() {
-        return likeInfo;
-    }
-
-    public void setLikeInfo(LikeInfo likeInfo) {
-        this.likeInfo = likeInfo;
-    }
-
-    public RepostInfo getRepostsInfo() {
-        return repostsInfo;
-    }
-
-    public void setRepostsInfo(RepostInfo repostsInfo) {
-        this.repostsInfo = repostsInfo;
     }
 
     public int getView() {

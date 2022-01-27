@@ -5,16 +5,15 @@ public class CommentInfo {
     private int commentAuthorId;    //идентификатор автора коментария
     private int countComment;      //кол-во комментариев
     private int threadCount;      // счетчик кол-ва рекомментов
-    private int threadId;
+    private int threadId;         //
     private int likeCountComment;      //счетчик кол-ва лайков к каждому из комментариев
-
-    public void setCommentId(int commentId) {
-
-        this.commentId = commentId;//команда присваивает id пользователя
-    }
 
     public int getCommentId() {
         return commentId;
+    }
+
+    public void setCommentId(int commentId) {
+        this.commentId = commentId;
     }
 
     public int getCommentAuthorId() {
