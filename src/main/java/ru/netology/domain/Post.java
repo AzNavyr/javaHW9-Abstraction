@@ -3,19 +3,35 @@ package ru.netology.domain;
 public class Post {
     private WritingOnTheWall writingOnTheWall;
     private Information information;
-    private CommentInfo commentInfo; //комментарии
-    private LikeInfo likeInfo; //лайки
-    private RepostInfo repostInfo; // репосты
     private SubscribersInfo subscribersInfo;
     private String postId; //идентификатор записи
-    private String imageUrl; //адрес картинки
     private int ownerId; //идентификатор пользователя или сообщества.
-    private String name; // название
+    private int fromId;
+    private int createBy;
     private int date; // время и дата публикауии
     private String text; // текст публикации
-    private int view; // просмотры
-    private int fromId;
+    private int replyOwnerId;
+    private int replyPostId;
+    private int friendsOnly;
+    private CommentInfo commentInfo; //комментарии
+    private Copyright copyright;
+    private LikeInfo likeInfo; //лайки
+    private RepostInfo repostInfo; // репосты
+    private View view;
     private String postType;
+    private PostSource postSource;
+    private String imageUrl; //адрес картинки
+    private Geo geo;
+    private int signerId;
+    private int canPin;
+    private int canDelete;
+    private int canEdit;
+    private int isPenned;
+    private int markedAsAds;
+    private boolean isFavorite;
+    private Donut donut;
+    private int postponedId;
+    private String name; // название
 
     public WritingOnTheWall getWritingOnTheWall() {
         return writingOnTheWall;
